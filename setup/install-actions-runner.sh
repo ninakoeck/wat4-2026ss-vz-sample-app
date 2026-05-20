@@ -38,4 +38,4 @@ curl --proto "=https" --tlsv1.2 -sSf -Lo actions-runner-linux-x64-latest.tar.gz 
      | jq '.assets[] | select(.name | contains("actions-runner-linux-x64-")).browser_download_url' -r)"
 
 tar vxzf ./actions-runner-linux-x64-latest.tar.gz
-rm -f ./actions-runner-linux-x64-latest.tar.gza
+rm -f ./actions-runner-linux-x64-latest.tar.gz
