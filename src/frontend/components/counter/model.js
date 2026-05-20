@@ -1,4 +1,4 @@
-import Math from '../../utils/Math.js';
+import Math from '../../utils/math.js';
 
 export class CounterModel {
     #value;

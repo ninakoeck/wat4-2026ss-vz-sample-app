@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import Math from "../utils/Math.js";
+import Math from "../utils/math.js";
 
 test('7919 is a prime number', () => {
   // arrange
