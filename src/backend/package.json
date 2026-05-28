@@ -8,11 +8,19 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "start": "node app.js",
+    "start": "node --import ./instrumentation.js app.js",
     "test": "node --experimental-vm-modules --disable-warning=ExperimentalWarning node_modules/jest/bin/jest.js",
     "test:node": "node --test --experimental-test-coverage \"**/tests/node/*.test.js\""
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.76.0",
+    "@opentelemetry/core": "^2.7.1",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.218.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.218.0",
+    "@opentelemetry/sdk-metrics": "^2.7.1",
+    "@opentelemetry/sdk-node": "^0.218.0",
+    "@opentelemetry/sdk-trace-node": "^2.7.1",
     "cors": "^2.8.6",
     "express": "^5.2.1"
   },

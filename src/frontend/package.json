@@ -6,26 +6,43 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
-    "start": "http-server -p 3000 -c-1",
+    "start": "parcel -p 3000 index.html",
     "test": "node --experimental-vm-modules --disable-warning=ExperimentalWarning node_modules/jest/bin/jest.js",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
     "test:e2e:report": "playwright show-report",
-    "test:e2e:codegen": "playwright codegen",
     "lint": "eslint ."
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@jest/globals": "^30.3.0",
-    "@playwright/test": "^1.59.1",
+    "@jest/globals": "^30.2.0",
+    "@playwright/test": "^1.48.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
-    "@types/node": "^25.5.2",
+    "buffer": "^6.0.3",
     "eslint": "^10.0.2",
     "http-server": "^14.1.1",
-    "jest": "^30.3.0",
-    "jest-environment-jsdom": "^30.3.0",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "parcel": "^2.16.4",
     "shadow-dom-testing-library": "^1.13.1"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/context-zone": "^2.7.1",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.218.0",
+    "@opentelemetry/instrumentation-document-load": "^0.63.0",
+    "@opentelemetry/instrumentation-fetch": "^0.218.0",
+    "@opentelemetry/instrumentation-user-interaction": "^0.62.0",
+    "@opentelemetry/instrumentation-xml-http-request": "^0.218.0",
+    "@opentelemetry/sdk-trace-web": "^2.7.1"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
   }
 }
